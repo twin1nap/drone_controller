@@ -1,0 +1,6 @@
+C:\Users\joran\Documents\GitHub\drone_controller\tello_library\bin\Debug\tello_library.dll
+C:\Users\joran\Documents\GitHub\drone_controller\tello_library\bin\Debug\tello_library.pdb
+C:\Users\joran\Documents\GitHub\drone_controller\tello_library\obj\Debug\tello_library.csproj.AssemblyReference.cache
+C:\Users\joran\Documents\GitHub\drone_controller\tello_library\obj\Debug\tello_library.csproj.CoreCompileInputs.cache
+C:\Users\joran\Documents\GitHub\drone_controller\tello_library\obj\Debug\tello_library.dll
+C:\Users\joran\Documents\GitHub\drone_controller\tello_library\obj\Debug\tello_library.pdb

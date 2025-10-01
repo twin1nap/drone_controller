@@ -1,0 +1,13 @@
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\obj\Debug\drone_controller.csproj.AssemblyReference.cache
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\obj\Debug\drone_controller.Form1.resources
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\obj\Debug\drone_controller.Properties.Resources.resources
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\obj\Debug\drone_controller.csproj.GenerateResource.cache
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\obj\Debug\drone_controller.csproj.CoreCompileInputs.cache
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\bin\Debug\drone_controller.exe.config
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\bin\Debug\drone_controller.exe
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\bin\Debug\drone_controller.pdb
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\bin\Debug\tello_library.dll
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\bin\Debug\tello_library.pdb
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\obj\Debug\drone_co.B3850EA6.Up2Date
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\obj\Debug\drone_controller.exe
+C:\Users\joran\Documents\GitHub\drone_controller\drone_controller\obj\Debug\drone_controller.pdb
