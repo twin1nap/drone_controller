@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\joran\\Documents\\GitHub\\drone_controller\\drone_controller\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88967F02-10E7-4B79-947E-CE461BF8D0FD}|drone_controller.csproj|c:\\users\\joran\\documents\\github\\drone_controller\\drone_controller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88967F02-10E7-4B79-947E-CE461BF8D0FD}|drone_controller.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{88967F02-10E7-4B79-947E-CE461BF8D0FD}|drone_controller.csproj|c:\\users\\joran\\documents\\github\\drone_controller\\drone_controller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{88967F02-10E7-4B79-947E-CE461BF8D0FD}|drone_controller.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{88967F02-10E7-4B79-947E-CE461BF8D0FD}|drone_controller.csproj|c:\\users\\joran\\documents\\github\\drone_controller\\drone_controller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88967F02-10E7-4B79-947E-CE461BF8D0FD}|drone_controller.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F43ADF12-3DBA-42E5-860F-B2925A4CD3F4}|..\\tello_library\\tello_library.csproj|c:\\users\\joran\\documents\\github\\drone_controller\\tello_library\\tello library.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -21,24 +21,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\joran\\Documents\\GitHub\\drone_controller\\drone_controller\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\joran\\Documents\\GitHub\\drone_controller\\drone_controller\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAgwF4AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAkwFcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-01T12:29:58.646Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\joran\\Documents\\GitHub\\drone_controller\\drone_controller\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

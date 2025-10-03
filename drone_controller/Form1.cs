@@ -30,44 +30,62 @@ namespace drone_controller
 
         }
 
-        //private async Task Form1_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.KeyCode == Keys.W)
-        //    {
-        //        await controler.SendCommandAsync("foward 20");
-        //    }
-        //    else if (e.KeyCode == Keys.S)
-        //    {
-        //        await controler.SendCommandAsync("back 20");
-        //    }
-
-        //}
 
         private async void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            TabPage selected_tab = tabControl.SelectedTab;
+            Button btn = null;
+            // tabControl.SelectedTab
             if (e.KeyCode == Keys.W)
             {
-                await controler.SendCommandAsync("forward 50");
+                //await controler.SendCommandAsync("forward 50");
+                btn = selected_tab.Controls["button_forward"] as Button;
+                //button_Click(selected_tab.Controls["button_forward"], EventArgs.Empty);
             }
             else if (e.KeyCode == Keys.S)
             {
-                await controler.SendCommandAsync("back 50");
+                btn = selected_tab.Controls["button_back"] as Button;
             }
             else if (e.KeyCode == Keys.A)
             {
-                await controler.SendCommandAsync("left 50");
+                btn = selected_tab.Controls["button_left"] as Button;
             }
             else if (e.KeyCode == Keys.D)
             {
-                await controler.SendCommandAsync("right 50");
+                btn = selected_tab.Controls["button_right"] as Button;
             }
             else if (e.KeyCode == Keys.Up)
             {
-                await controler.SendCommandAsync("flip f");
+                btn = selected_tab.Controls["button_up"] as Button;
             }
-            else if (e.KeyCode == Keys.T)
+            else if (e.KeyCode == Keys.Down)
             {
-                await controler.SendCommandAsync("flip b");
+                btn = selected_tab.Controls["button_down"] as Button;
+            }
+            else if (e.KeyCode == Keys.Left)
+            {
+                btn = selected_tab.Controls["button_left"] as Button;
+            }
+            else if (e.KeyCode == Keys.Right)
+            {
+                btn = selected_tab.Controls["button_right"] as Button;
+            }
+            else if (e.KeyCode == Keys.Space)
+            {
+                btn = selected_tab.Controls["button_fly_land"] as Button;
+            }
+            else
+            {
+                MessageBox.Show("no button assigned to that key", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            if (btn != null)
+            {
+                btn.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("no button found", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

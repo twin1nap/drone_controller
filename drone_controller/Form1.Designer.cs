@@ -40,15 +40,15 @@
             this.lbl_speed = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.trackBar_speed = new System.Windows.Forms.TrackBar();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_fly_land = new System.Windows.Forms.Button();
+            this.button_up = new System.Windows.Forms.Button();
+            this.button_yaw_right = new System.Windows.Forms.Button();
+            this.button_down = new System.Windows.Forms.Button();
+            this.button_yaw_left = new System.Windows.Forms.Button();
+            this.button_forward = new System.Windows.Forms.Button();
+            this.button_right = new System.Windows.Forms.Button();
+            this.button_back = new System.Windows.Forms.Button();
+            this.button_left = new System.Windows.Forms.Button();
             this.tabPage_advanced = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             this.tabPage_standaard.SuspendLayout();
@@ -82,15 +82,15 @@
             this.tabPage_standaard.Controls.Add(this.lbl_speed);
             this.tabPage_standaard.Controls.Add(this.label1);
             this.tabPage_standaard.Controls.Add(this.trackBar_speed);
-            this.tabPage_standaard.Controls.Add(this.button9);
-            this.tabPage_standaard.Controls.Add(this.button5);
-            this.tabPage_standaard.Controls.Add(this.button6);
-            this.tabPage_standaard.Controls.Add(this.button7);
-            this.tabPage_standaard.Controls.Add(this.button8);
-            this.tabPage_standaard.Controls.Add(this.button4);
-            this.tabPage_standaard.Controls.Add(this.button3);
-            this.tabPage_standaard.Controls.Add(this.button2);
-            this.tabPage_standaard.Controls.Add(this.button1);
+            this.tabPage_standaard.Controls.Add(this.button_fly_land);
+            this.tabPage_standaard.Controls.Add(this.button_up);
+            this.tabPage_standaard.Controls.Add(this.button_yaw_right);
+            this.tabPage_standaard.Controls.Add(this.button_down);
+            this.tabPage_standaard.Controls.Add(this.button_yaw_left);
+            this.tabPage_standaard.Controls.Add(this.button_forward);
+            this.tabPage_standaard.Controls.Add(this.button_right);
+            this.tabPage_standaard.Controls.Add(this.button_back);
+            this.tabPage_standaard.Controls.Add(this.button_left);
             this.tabPage_standaard.Location = new System.Drawing.Point(4, 25);
             this.tabPage_standaard.Name = "tabPage_standaard";
             this.tabPage_standaard.Padding = new System.Windows.Forms.Padding(3);
@@ -229,103 +229,103 @@
             this.trackBar_speed.Value = 50;
             this.trackBar_speed.Scroll += new System.EventHandler(this.trackBar_speed_Scroll);
             // 
-            // button9
+            // button_fly_land
             // 
-            this.button9.Location = new System.Drawing.Point(309, 112);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(124, 53);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "takeoff/land\r\n(space)";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button_fly_land.Location = new System.Drawing.Point(310, 112);
+            this.button_fly_land.Name = "button_fly_land";
+            this.button_fly_land.Size = new System.Drawing.Size(124, 53);
+            this.button_fly_land.TabIndex = 8;
+            this.button_fly_land.Text = "takeoff/land\r\n(space)";
+            this.button_fly_land.UseVisualStyleBackColor = true;
+            this.button_fly_land.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button5
+            // button_up
             // 
-            this.button5.Location = new System.Drawing.Point(526, 112);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(87, 53);
-            this.button5.TabIndex = 7;
-            this.button5.Tag = "up";
-            this.button5.Text = "up\r\n(↑)";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button_Click);
+            this.button_up.Location = new System.Drawing.Point(526, 112);
+            this.button_up.Name = "button_up";
+            this.button_up.Size = new System.Drawing.Size(87, 53);
+            this.button_up.TabIndex = 7;
+            this.button_up.Tag = "up";
+            this.button_up.Text = "up\r\n(↑)";
+            this.button_up.UseVisualStyleBackColor = true;
+            this.button_up.Click += new System.EventHandler(this.button_Click);
             // 
-            // button6
+            // button_yaw_right
             // 
-            this.button6.Location = new System.Drawing.Point(619, 171);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 53);
-            this.button6.TabIndex = 6;
-            this.button6.Tag = "cw";
-            this.button6.Text = "yaw right\r\n(→)";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button_Click);
+            this.button_yaw_right.Location = new System.Drawing.Point(619, 171);
+            this.button_yaw_right.Name = "button_yaw_right";
+            this.button_yaw_right.Size = new System.Drawing.Size(87, 53);
+            this.button_yaw_right.TabIndex = 6;
+            this.button_yaw_right.Tag = "cw";
+            this.button_yaw_right.Text = "yaw right\r\n(→)";
+            this.button_yaw_right.UseVisualStyleBackColor = true;
+            this.button_yaw_right.Click += new System.EventHandler(this.button_Click);
             // 
-            // button7
+            // button_down
             // 
-            this.button7.Location = new System.Drawing.Point(526, 171);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(87, 53);
-            this.button7.TabIndex = 5;
-            this.button7.Tag = "down";
-            this.button7.Text = "down\r\n(↓)";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button_Click);
+            this.button_down.Location = new System.Drawing.Point(526, 171);
+            this.button_down.Name = "button_down";
+            this.button_down.Size = new System.Drawing.Size(87, 53);
+            this.button_down.TabIndex = 5;
+            this.button_down.Tag = "down";
+            this.button_down.Text = "down\r\n(↓)";
+            this.button_down.UseVisualStyleBackColor = true;
+            this.button_down.Click += new System.EventHandler(this.button_Click);
             // 
-            // button8
+            // button_yaw_left
             // 
-            this.button8.Location = new System.Drawing.Point(433, 171);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(87, 53);
-            this.button8.TabIndex = 4;
-            this.button8.Tag = "ccw";
-            this.button8.Text = "yaw left\r\n(←)\r\n";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button_Click);
+            this.button_yaw_left.Location = new System.Drawing.Point(433, 171);
+            this.button_yaw_left.Name = "button_yaw_left";
+            this.button_yaw_left.Size = new System.Drawing.Size(87, 53);
+            this.button_yaw_left.TabIndex = 4;
+            this.button_yaw_left.Tag = "ccw";
+            this.button_yaw_left.Text = "yaw left\r\n(←)\r\n";
+            this.button_yaw_left.UseVisualStyleBackColor = true;
+            this.button_yaw_left.Click += new System.EventHandler(this.button_Click);
             // 
-            // button4
+            // button_forward
             // 
-            this.button4.Location = new System.Drawing.Point(131, 112);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 53);
-            this.button4.TabIndex = 3;
-            this.button4.Tag = "forward";
-            this.button4.Text = "forward\r\n(W)";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button_Click);
+            this.button_forward.Location = new System.Drawing.Point(131, 112);
+            this.button_forward.Name = "button_forward";
+            this.button_forward.Size = new System.Drawing.Size(87, 53);
+            this.button_forward.TabIndex = 3;
+            this.button_forward.Tag = "forward";
+            this.button_forward.Text = "forward\r\n(W)";
+            this.button_forward.UseVisualStyleBackColor = true;
+            this.button_forward.Click += new System.EventHandler(this.button_Click);
             // 
-            // button3
+            // button_right
             // 
-            this.button3.Location = new System.Drawing.Point(224, 171);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 53);
-            this.button3.TabIndex = 2;
-            this.button3.Tag = "right";
-            this.button3.Text = "right\r\n(R)";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button_Click);
+            this.button_right.Location = new System.Drawing.Point(224, 171);
+            this.button_right.Name = "button_right";
+            this.button_right.Size = new System.Drawing.Size(87, 53);
+            this.button_right.TabIndex = 2;
+            this.button_right.Tag = "right";
+            this.button_right.Text = "right\r\n(R)";
+            this.button_right.UseVisualStyleBackColor = true;
+            this.button_right.Click += new System.EventHandler(this.button_Click);
             // 
-            // button2
+            // button_back
             // 
-            this.button2.Location = new System.Drawing.Point(131, 171);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 53);
-            this.button2.TabIndex = 1;
-            this.button2.Tag = "back";
-            this.button2.Text = "backward\r\n(S)";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button_Click);
+            this.button_back.Location = new System.Drawing.Point(131, 171);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(87, 53);
+            this.button_back.TabIndex = 1;
+            this.button_back.Tag = "back";
+            this.button_back.Text = "backward\r\n(S)";
+            this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button_Click);
             // 
-            // button1
+            // button_left
             // 
-            this.button1.Location = new System.Drawing.Point(38, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 53);
-            this.button1.TabIndex = 0;
-            this.button1.Tag = "left";
-            this.button1.Text = "left\r\n(A)";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button_Click);
+            this.button_left.Location = new System.Drawing.Point(38, 171);
+            this.button_left.Name = "button_left";
+            this.button_left.Size = new System.Drawing.Size(87, 53);
+            this.button_left.TabIndex = 0;
+            this.button_left.Tag = "left";
+            this.button_left.Text = "left\r\n(A)";
+            this.button_left.UseVisualStyleBackColor = true;
+            this.button_left.Click += new System.EventHandler(this.button_Click);
             // 
             // tabPage_advanced
             // 
@@ -362,17 +362,17 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage_standaard;
         private System.Windows.Forms.TabPage tabPage_advanced;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_left;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TrackBar trackBar_speed;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_fly_land;
+        private System.Windows.Forms.Button button_up;
+        private System.Windows.Forms.Button button_yaw_right;
+        private System.Windows.Forms.Button button_down;
+        private System.Windows.Forms.Button button_yaw_left;
+        private System.Windows.Forms.Button button_forward;
+        private System.Windows.Forms.Button button_right;
+        private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Label lbl_speed;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
