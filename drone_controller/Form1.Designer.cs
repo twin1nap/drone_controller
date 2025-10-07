@@ -1,6 +1,6 @@
 ﻿namespace drone_controller
 {
-    partial class Form1
+    partial class drone_controller
     {
         /// <summary>
         /// Required designer variable.
@@ -237,7 +237,7 @@
             this.button_fly_land.TabIndex = 8;
             this.button_fly_land.Text = "takeoff/land\r\n(space)";
             this.button_fly_land.UseVisualStyleBackColor = true;
-            this.button_fly_land.Click += new System.EventHandler(this.button9_Click);
+            this.button_fly_land.Click += new System.EventHandler(this.button_fly_land_Click);
             // 
             // button_up
             // 
@@ -337,14 +337,14 @@
             this.tabPage_advanced.Text = "advanced";
             this.tabPage_advanced.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // drone_controller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl);
             this.KeyPreview = true;
-            this.Name = "Form1";
+            this.Name = "drone_controller";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.tabControl.ResumeLayout(false);

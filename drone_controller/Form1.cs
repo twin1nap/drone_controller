@@ -11,21 +11,21 @@ using tello_library;
 
 namespace drone_controller
 {
-    public partial class Form1 : Form
+    public partial class drone_controller : Form
     {
         tello_controler controler = new tello_controler();
-        public Form1()
+        public drone_controller()
         {
             InitializeComponent();
             start_connection(controler);
         }
 
-    static async Task start_connection(tello_controler controler)
-    {
-            
+
+        static async Task start_connection(tello_controler controler)
+        {
 
             // Enter SDK mode
-            await controler.SendCommandAsync("command");
+            await controler.SendCommandAsync("command"); //add connection check
             await controler.SendCommandAsync("battery?");
 
         }
@@ -74,10 +74,12 @@ namespace drone_controller
             {
                 btn = selected_tab.Controls["button_fly_land"] as Button;
             }
-            else
-            {
-                MessageBox.Show("no button assigned to that key", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
+
+            //else
+            //{
+            //    MessageBox.Show("no button assigned to that key", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
 
             if (btn != null)
             {
@@ -86,6 +88,17 @@ namespace drone_controller
             else
             {
                 MessageBox.Show("no button found", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // so if you use arrow keys or space it doesnt do other stuff
+            if (e.KeyCode == Keys.Up ||
+                e.KeyCode == Keys.Down ||
+                e.KeyCode == Keys.Left ||
+                e.KeyCode == Keys.Right ||
+                e.KeyCode == Keys.Space
+                )
+            {
+                e.Handled = true;
             }
         }
 
@@ -106,12 +119,12 @@ namespace drone_controller
         }
 
         bool fly = false;
-        private async void button9_Click(object sender, EventArgs e)
+        private async void button_fly_land_Click(object sender, EventArgs e)
         {
             //Console.WriteLine(await controler.SendCommandAsync("time?"));
             //int time = int.Parse((await controler.SendCommandAsync("time?")).Replace("s", ""));
             if (fly == true) //als het langer vliegt dan 0 seconden
-            { 
+            {
                 await controler.SendCommandAsync($"land");
                 fly = false;
             }
@@ -120,7 +133,7 @@ namespace drone_controller
                 await controler.SendCommandAsync($"takeoff");
                 fly = true;
             }
-            
+
         }
 
         private async void trackBar_speed_Scroll(object sender, EventArgs e)

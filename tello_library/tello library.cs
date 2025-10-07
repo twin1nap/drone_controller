@@ -11,7 +11,7 @@ namespace tello_library
     public class tello_controler
     {
         // the udp is the object that is bassically the connection
-        public UdpClient UDP = new UdpClient(8889);
+        public UdpClient UDP_control = new UdpClient(8889);
         //the endpoint where commands need to go
         public IPEndPoint drone_endpoint = new IPEndPoint(IPAddress.Parse("192.168.10.1"), 8889);
 
@@ -23,15 +23,14 @@ namespace tello_library
             // The command we want to send (text string)
             byte[] commandBytes = Encoding.UTF8.GetBytes(command);
 
-            await UDP.SendAsync(commandBytes, commandBytes.Length, drone_endpoint);
+            await UDP_control.SendAsync(commandBytes, commandBytes.Length, drone_endpoint);
             Console.WriteLine($"Sent: {command}");
 
             // Wait for the drone's response
-            var response = await UDP.ReceiveAsync();
+            var response = await UDP_control.ReceiveAsync();
             string reply = Encoding.UTF8.GetString(response.Buffer);
             Console.WriteLine($"Received: {reply}");
             return reply;
-
         }
     }
 }
