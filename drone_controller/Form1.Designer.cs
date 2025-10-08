@@ -30,6 +30,10 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_standaard = new System.Windows.Forms.TabPage();
+            this.BtnSaveFlightPath = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BtnOpenFlightPath = new System.Windows.Forms.Button();
+            this.RtbFlightPath = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.num_distance = new System.Windows.Forms.NumericUpDown();
@@ -50,6 +54,9 @@
             this.button_back = new System.Windows.Forms.Button();
             this.button_left = new System.Windows.Forms.Button();
             this.tabPage_advanced = new System.Windows.Forms.TabPage();
+            this.openFlightPathDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFlightPathDialog = new System.Windows.Forms.SaveFileDialog();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage_standaard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_distance)).BeginInit();
@@ -67,11 +74,16 @@
             this.tabControl.Location = new System.Drawing.Point(3, 2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(796, 448);
+            this.tabControl.Size = new System.Drawing.Size(796, 740);
             this.tabControl.TabIndex = 0;
             // 
             // tabPage_standaard
             // 
+            this.tabPage_standaard.Controls.Add(this.label7);
+            this.tabPage_standaard.Controls.Add(this.BtnSaveFlightPath);
+            this.tabPage_standaard.Controls.Add(this.button1);
+            this.tabPage_standaard.Controls.Add(this.BtnOpenFlightPath);
+            this.tabPage_standaard.Controls.Add(this.RtbFlightPath);
             this.tabPage_standaard.Controls.Add(this.label5);
             this.tabPage_standaard.Controls.Add(this.label6);
             this.tabPage_standaard.Controls.Add(this.num_distance);
@@ -94,10 +106,51 @@
             this.tabPage_standaard.Location = new System.Drawing.Point(4, 25);
             this.tabPage_standaard.Name = "tabPage_standaard";
             this.tabPage_standaard.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_standaard.Size = new System.Drawing.Size(788, 419);
+            this.tabPage_standaard.Size = new System.Drawing.Size(788, 711);
             this.tabPage_standaard.TabIndex = 0;
             this.tabPage_standaard.Text = "standaard";
             this.tabPage_standaard.UseVisualStyleBackColor = true;
+            // 
+            // BtnSaveFlightPath
+            // 
+            this.BtnSaveFlightPath.Location = new System.Drawing.Point(521, 417);
+            this.BtnSaveFlightPath.Name = "BtnSaveFlightPath";
+            this.BtnSaveFlightPath.Size = new System.Drawing.Size(127, 34);
+            this.BtnSaveFlightPath.TabIndex = 22;
+            this.BtnSaveFlightPath.Text = "save flight plan";
+            this.BtnSaveFlightPath.UseVisualStyleBackColor = true;
+            this.BtnSaveFlightPath.Click += new System.EventHandler(this.BtnSaveFlightPath_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(654, 417);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(127, 34);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "run flight plan";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BtnOpenFlightPath
+            // 
+            this.BtnOpenFlightPath.Location = new System.Drawing.Point(10, 417);
+            this.BtnOpenFlightPath.Name = "BtnOpenFlightPath";
+            this.BtnOpenFlightPath.Size = new System.Drawing.Size(127, 34);
+            this.BtnOpenFlightPath.TabIndex = 20;
+            this.BtnOpenFlightPath.Text = "open flight plan";
+            this.BtnOpenFlightPath.UseVisualStyleBackColor = true;
+            this.BtnOpenFlightPath.Click += new System.EventHandler(this.BtnOpenFlightPath_Click);
+            // 
+            // RtbFlightPath
+            // 
+            this.RtbFlightPath.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RtbFlightPath.Location = new System.Drawing.Point(10, 457);
+            this.RtbFlightPath.Name = "RtbFlightPath";
+            this.RtbFlightPath.Size = new System.Drawing.Size(771, 229);
+            this.RtbFlightPath.TabIndex = 19;
+            this.RtbFlightPath.Text = "";
             // 
             // label5
             // 
@@ -332,16 +385,31 @@
             this.tabPage_advanced.Location = new System.Drawing.Point(4, 25);
             this.tabPage_advanced.Name = "tabPage_advanced";
             this.tabPage_advanced.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_advanced.Size = new System.Drawing.Size(788, 419);
+            this.tabPage_advanced.Size = new System.Drawing.Size(788, 674);
             this.tabPage_advanced.TabIndex = 1;
             this.tabPage_advanced.Text = "advanced";
             this.tabPage_advanced.UseVisualStyleBackColor = true;
+            // 
+            // openFlightPathDialog
+            // 
+            this.openFlightPathDialog.FileName = "openFileDialog1";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 690);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(591, 16);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Use only directional commands because rc command wont work because it can\'t remem" +
+    "ber timing.";
             // 
             // drone_controller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 742);
             this.Controls.Add(this.tabControl);
             this.KeyPreview = true;
             this.Name = "drone_controller";
@@ -381,6 +449,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown num_angle;
+        private System.Windows.Forms.Button BtnOpenFlightPath;
+        private System.Windows.Forms.RichTextBox RtbFlightPath;
+        private System.Windows.Forms.OpenFileDialog openFlightPathDialog;
+        private System.Windows.Forms.Button BtnSaveFlightPath;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.SaveFileDialog saveFlightPathDialog;
+        private System.Windows.Forms.Label label7;
     }
 }
 

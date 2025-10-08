@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,10 +86,10 @@ namespace drone_controller
             {
                 btn.PerformClick();
             }
-            else
-            {
-                MessageBox.Show("no button found", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //else
+            //{
+            //    MessageBox.Show("no button found", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
             // so if you use arrow keys or space it doesnt do other stuff
             if (e.KeyCode == Keys.Up ||
@@ -139,8 +140,42 @@ namespace drone_controller
         private async void trackBar_speed_Scroll(object sender, EventArgs e)
         {
             lbl_speed.Text = trackBar_speed.Value.ToString();
-            await controler.SendCommandAsync($"speed {trackBar_speed.Value}");
+            await controler.SendCommandAsync($"speed {trackBar_speed.Value} cm/s" );
 
+        }
+
+        private void BtnOpenFlightPath_Click(object sender, EventArgs e)
+        {
+            if (openFlightPathDialog.ShowDialog() == DialogResult.OK)
+            {
+                string path;
+                path = openFlightPathDialog.FileName;
+                string[] lines = File.ReadAllLines(path);
+                //foreach (string line in lines)
+                //{
+                //    richTextBox1.Lines.Append(line);
+                //}
+                RtbFlightPath.Lines = lines;
+                
+            }
+        }
+
+        private void BtnSaveFlightPath_Click(object sender, EventArgs e)
+        {
+            if (saveFlightPathDialog.ShowDialog() ==DialogResult.OK)
+            {
+                string path;
+                path = saveFlightPathDialog.FileName;
+                File.WriteAllText(path, RtbFlightPath.Text);
+            }
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            foreach (string line in RtbFlightPath.Lines)
+            {
+                await controler.SendCommandAsync(line);
+            }
         }
     }
 }
