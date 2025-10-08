@@ -140,7 +140,7 @@ namespace drone_controller
         private async void trackBar_speed_Scroll(object sender, EventArgs e)
         {
             lbl_speed.Text = trackBar_speed.Value.ToString();
-            await controler.SendCommandAsync($"speed {trackBar_speed.Value} cm/s" );
+            await controler.SendCommandAsync($"speed {trackBar_speed.Value}" );
 
         }
 
@@ -170,7 +170,7 @@ namespace drone_controller
             }
         }
 
-        private async void button1_Click(object sender, EventArgs e)
+        private async void BtnRunFlightPath_Click(object sender, EventArgs e)
         {
             foreach (string line in RtbFlightPath.Lines)
             {

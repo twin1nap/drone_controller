@@ -31,7 +31,7 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_standaard = new System.Windows.Forms.TabPage();
             this.BtnSaveFlightPath = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnRunFlightPath = new System.Windows.Forms.Button();
             this.BtnOpenFlightPath = new System.Windows.Forms.Button();
             this.RtbFlightPath = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             // 
             this.tabPage_standaard.Controls.Add(this.label7);
             this.tabPage_standaard.Controls.Add(this.BtnSaveFlightPath);
-            this.tabPage_standaard.Controls.Add(this.button1);
+            this.tabPage_standaard.Controls.Add(this.BtnRunFlightPath);
             this.tabPage_standaard.Controls.Add(this.BtnOpenFlightPath);
             this.tabPage_standaard.Controls.Add(this.RtbFlightPath);
             this.tabPage_standaard.Controls.Add(this.label5);
@@ -121,15 +121,15 @@
             this.BtnSaveFlightPath.UseVisualStyleBackColor = true;
             this.BtnSaveFlightPath.Click += new System.EventHandler(this.BtnSaveFlightPath_Click);
             // 
-            // button1
+            // BtnRunFlightPath
             // 
-            this.button1.Location = new System.Drawing.Point(654, 417);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 34);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "run flight plan";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnRunFlightPath.Location = new System.Drawing.Point(654, 417);
+            this.BtnRunFlightPath.Name = "BtnRunFlightPath";
+            this.BtnRunFlightPath.Size = new System.Drawing.Size(127, 34);
+            this.BtnRunFlightPath.TabIndex = 21;
+            this.BtnRunFlightPath.Text = "run flight plan";
+            this.BtnRunFlightPath.UseVisualStyleBackColor = true;
+            this.BtnRunFlightPath.Click += new System.EventHandler(this.BtnRunFlightPath_Click);
             // 
             // BtnOpenFlightPath
             // 
@@ -453,7 +453,7 @@
         private System.Windows.Forms.RichTextBox RtbFlightPath;
         private System.Windows.Forms.OpenFileDialog openFlightPathDialog;
         private System.Windows.Forms.Button BtnSaveFlightPath;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnRunFlightPath;
         private System.Windows.Forms.SaveFileDialog saveFlightPathDialog;
         private System.Windows.Forms.Label label7;
     }
