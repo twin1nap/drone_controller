@@ -37,45 +37,51 @@ namespace drone_controller
             TabPage selected_tab = tabControl.SelectedTab;
             Button btn = null;
             // tabControl.SelectedTab
-            if (e.KeyCode == Keys.W)
+            if (ActiveControl is RichTextBox)
             {
-                //await controler.SendCommandAsync("forward 50");
-                btn = selected_tab.Controls["button_forward"] as Button;
-                //button_Click(selected_tab.Controls["button_forward"], EventArgs.Empty);
+                return;
             }
-            else if (e.KeyCode == Keys.S)
+            else 
             {
-                btn = selected_tab.Controls["button_back"] as Button;
+                if (e.KeyCode == Keys.W)
+                {
+                    //await controler.SendCommandAsync("forward 50");
+                    btn = selected_tab.Controls["button_forward"] as Button;
+                    //button_Click(selected_tab.Controls["button_forward"], EventArgs.Empty);
+                }
+                else if (e.KeyCode == Keys.S)
+                {
+                    btn = selected_tab.Controls["button_back"] as Button;
+                }
+                else if (e.KeyCode == Keys.A)
+                {
+                    btn = selected_tab.Controls["button_left"] as Button;
+                }
+                else if (e.KeyCode == Keys.D)
+                {
+                    btn = selected_tab.Controls["button_right"] as Button;
+                }
+                else if (e.KeyCode == Keys.Up)
+                {
+                    btn = selected_tab.Controls["button_up"] as Button;
+                }
+                else if (e.KeyCode == Keys.Down)
+                {
+                    btn = selected_tab.Controls["button_down"] as Button;
+                }
+                else if (e.KeyCode == Keys.Left)
+                {
+                    btn = selected_tab.Controls["button_left"] as Button;
+                }
+                else if (e.KeyCode == Keys.Right)
+                {
+                    btn = selected_tab.Controls["button_right"] as Button;
+                }
+                else if (e.KeyCode == Keys.Space)
+                {
+                    btn = selected_tab.Controls["button_fly_land"] as Button;
+                }
             }
-            else if (e.KeyCode == Keys.A)
-            {
-                btn = selected_tab.Controls["button_left"] as Button;
-            }
-            else if (e.KeyCode == Keys.D)
-            {
-                btn = selected_tab.Controls["button_right"] as Button;
-            }
-            else if (e.KeyCode == Keys.Up)
-            {
-                btn = selected_tab.Controls["button_up"] as Button;
-            }
-            else if (e.KeyCode == Keys.Down)
-            {
-                btn = selected_tab.Controls["button_down"] as Button;
-            }
-            else if (e.KeyCode == Keys.Left)
-            {
-                btn = selected_tab.Controls["button_left"] as Button;
-            }
-            else if (e.KeyCode == Keys.Right)
-            {
-                btn = selected_tab.Controls["button_right"] as Button;
-            }
-            else if (e.KeyCode == Keys.Space)
-            {
-                btn = selected_tab.Controls["button_fly_land"] as Button;
-            }
-            
 
             //else
             //{
@@ -172,10 +178,12 @@ namespace drone_controller
 
         private async void BtnRunFlightPath_Click(object sender, EventArgs e)
         {
+            tabControl.Enabled = false;
             foreach (string line in RtbFlightPath.Lines)
             {
                 await controler.SendCommandAsync(line);
             }
+            tabControl.Enabled = true;
         }
     }
 }
