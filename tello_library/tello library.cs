@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace tello_library
 {
+    /// <summary>
+    /// the main object that is your connection with the tello drone
+    /// </summary>
     public class tello_controler
     {
         // the udp is the object that is bassically the connection
@@ -18,6 +21,11 @@ namespace tello_library
         //string command = "command"; // Tello needs this first to enter SDK mode
 
         // Send a command to the drone and get the response
+        /// <summary>
+        /// sends a command and waits for a response
+        /// </summary>
+        /// <param name="command">the command being send to the tello drone</param>
+        /// <returns> the response over the connection</returns>
         public async Task<string> SendCommandAsync(string command)
         {
             // The command we want to send (text string)

@@ -15,11 +15,14 @@ namespace drone_controller
     public partial class drone_controller : Form
     {
         tello_controler controler = new tello_controler();
+        telementry Telementry = new telementry();
         public drone_controller()
         {
             InitializeComponent();
             start_connection(controler);
         }
+
+
 
 
         static async Task start_connection(tello_controler controler)
@@ -28,7 +31,6 @@ namespace drone_controller
             // Enter SDK mode
             await controler.SendCommandAsync("command"); //add connection check
             await controler.SendCommandAsync("battery?");
-
         }
 
 
@@ -184,6 +186,11 @@ namespace drone_controller
                 await controler.SendCommandAsync(line);
             }
             tabControl.Enabled = true;
+        }
+
+        private void timerTelementry_Tick(object sender, EventArgs e)
+        {
+            lblTelementry.Text = Telementry.current_string;
         }
     }
 }

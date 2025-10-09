@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\TelemetryData.cs" />
+    <Compile Include="telementry.cs" />
     <Compile Include="tello library.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

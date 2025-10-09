@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage_standaard = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
             this.BtnSaveFlightPath = new System.Windows.Forms.Button();
             this.BtnRunFlightPath = new System.Windows.Forms.Button();
             this.BtnOpenFlightPath = new System.Windows.Forms.Button();
@@ -40,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.num_angle = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTelementry = new System.Windows.Forms.Label();
             this.lbl_speed = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.trackBar_speed = new System.Windows.Forms.TrackBar();
@@ -56,7 +58,7 @@
             this.tabPage_advanced = new System.Windows.Forms.TabPage();
             this.openFlightPathDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFlightPathDialog = new System.Windows.Forms.SaveFileDialog();
-            this.label7 = new System.Windows.Forms.Label();
+            this.timerTelementry = new System.Windows.Forms.Timer(this.components);
             this.tabControl.SuspendLayout();
             this.tabPage_standaard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_distance)).BeginInit();
@@ -90,7 +92,7 @@
             this.tabPage_standaard.Controls.Add(this.label4);
             this.tabPage_standaard.Controls.Add(this.label2);
             this.tabPage_standaard.Controls.Add(this.num_angle);
-            this.tabPage_standaard.Controls.Add(this.label3);
+            this.tabPage_standaard.Controls.Add(this.lblTelementry);
             this.tabPage_standaard.Controls.Add(this.lbl_speed);
             this.tabPage_standaard.Controls.Add(this.label1);
             this.tabPage_standaard.Controls.Add(this.trackBar_speed);
@@ -110,6 +112,17 @@
             this.tabPage_standaard.TabIndex = 0;
             this.tabPage_standaard.Text = "standaard";
             this.tabPage_standaard.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(7, 690);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(591, 16);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Use only directional commands because rc command wont work because it can\'t remem" +
+    "ber timing.";
             // 
             // BtnSaveFlightPath
             // 
@@ -244,14 +257,14 @@
             0,
             0});
             // 
-            // label3
+            // lblTelementry
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "stats";
+            this.lblTelementry.AutoSize = true;
+            this.lblTelementry.Location = new System.Drawing.Point(7, 7);
+            this.lblTelementry.Name = "lblTelementry";
+            this.lblTelementry.Size = new System.Drawing.Size(35, 16);
+            this.lblTelementry.TabIndex = 12;
+            this.lblTelementry.Text = "stats";
             // 
             // lbl_speed
             // 
@@ -385,7 +398,7 @@
             this.tabPage_advanced.Location = new System.Drawing.Point(4, 25);
             this.tabPage_advanced.Name = "tabPage_advanced";
             this.tabPage_advanced.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_advanced.Size = new System.Drawing.Size(788, 674);
+            this.tabPage_advanced.Size = new System.Drawing.Size(788, 711);
             this.tabPage_advanced.TabIndex = 1;
             this.tabPage_advanced.Text = "advanced";
             this.tabPage_advanced.UseVisualStyleBackColor = true;
@@ -394,16 +407,10 @@
             // 
             this.openFlightPathDialog.FileName = "openFileDialog1";
             // 
-            // label7
+            // timerTelementry
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 690);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(591, 16);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Use only directional commands because rc command wont work because it can\'t remem" +
-    "ber timing.";
+            this.timerTelementry.Enabled = true;
+            this.timerTelementry.Tick += new System.EventHandler(this.timerTelementry_Tick);
             // 
             // drone_controller
             // 
@@ -442,7 +449,7 @@
         private System.Windows.Forms.Button button_right;
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Label lbl_speed;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTelementry;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown num_distance;
@@ -456,6 +463,7 @@
         private System.Windows.Forms.Button BtnRunFlightPath;
         private System.Windows.Forms.SaveFileDialog saveFlightPathDialog;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Timer timerTelementry;
     }
 }
 
